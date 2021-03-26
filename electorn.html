@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="sk-SK">
+    <head>
+        <meta charset="utf-8" />
+        <title>Electorn</title>
+        <link rel="stylesheet" href="style.css" type="text/css" />
+        <script src="js/main.js"></script>
+        </head>
+    <body>
+        <h1>Electorn</h1>
+        <p>
+            Táto aplikácia umožňuje na základe počtu zúčastnených voličov a dosiahnutých percent jednotlivých strán spočítať ich mandáty, a následne určiť možné koalície.
+            </p>
+
+        <p>
+            Jednotlivé strany zadávajte v tvare "názov strany: počet percent", jednu na riadok.
+            </p>
+
+        <p>
+            Môžete tiež uvádzať volebné koalície, a to tak, že názvy jednotlivých strán oddelíte symbolom + napr.: "A+B: 20%".
+            </p>
+
+        <p>
+            Znak % za počtom percent strany je nepovinný, pre oddelenie desatinnej časti môžete používať ako čiarku, tak aj bodku.
+            </p>
+
+        <p>
+            Počet voličov nemá výraznejší vplyv na výsledný počet mandátov, v malých hodnotách však má tendenciu skresľovať výsledky v dôsledku zaokrúhľovania. Je preto vhodné používať väčšie čísla, rádovo v miliónoch, aby sa tomuto efektu zamedzilo.
+            </p>
+
+        <form>
+            <label for="votersCountInputText">Počet voličov:</label>
+            <input type="text" id="votersCountInputText" />
+            <br />
+
+            <label for="partiesPercentagesInputText">Strany a ich percentá:</label>
+            <br />
+            <textarea id="partiesPercentagesTextArea" cols="40" rows="5"></textarea>
+            <br />
+
+            <input type="button" id="submitButton" value="Potvrdiť" />
+
+            </form>
+
+        <form id="partiesListForm">
+
+            </form>
+
+        <p>
+            Koalícia zo zvolených strán by v parlamente mala <strong id="coalitionMandatesCountStrong" aria-live="polite">0 kresiel (0%)</strong>.
+            </p>
+
+        <p>
+            🄯 2021 RastislavKish. Licencované pod GnU GPL v3. Viac informácií nájdete na stránke <a href="https://github.com/RastislavKish/Electorn">oficiálneho repozitára.</a>
+            </p>
+        </body>
+    </html>
